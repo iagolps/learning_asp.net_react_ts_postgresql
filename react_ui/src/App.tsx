@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Home} from './Home';
+import {Home} from './Component/Home';
 import {Department} from "./Component/Department";
 import {Employee} from './Component/Employee';
 import {BrowserRouter, Route, Routes, NavLink} from 'react-router-dom';

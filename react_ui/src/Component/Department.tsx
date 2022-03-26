@@ -34,9 +34,9 @@ const {data: departments, isFetching} = useQuery<Departments[]>( 'DepartmentId',
                 <tbody>
                     {departments?.map(dep => {
                         return (
-                        <tr key={dep.DepartmentId}>
-                            <th scope="row">{dep.DepartmentId}</th>
-                            <td>{dep.DepartmentName}</td>
+                        <tr key={dep.departmentid}>
+                            <th scope="row">{dep.departmentid}</th>
+                            <td>{dep.departmentname}</td>
                             <td>
                                 <button type='button'
                                 className='btn btn-light mr-1'>
@@ -57,8 +57,7 @@ const {data: departments, isFetching} = useQuery<Departments[]>( 'DepartmentId',
                         )
                     })}
                 </tbody>
-            </table>
+                </table>
         </div>
     )
-
 }

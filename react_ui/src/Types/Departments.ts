@@ -1,4 +1,4 @@
 export type Departments = {
-    DepartmentId: number;
-    DepartmentName: string;
+    departmentid: number;
+    departmentname: string;
 }

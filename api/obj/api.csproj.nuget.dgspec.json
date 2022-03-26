@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\sample_asp_reacttypescript_postgresql\\api\\api.csproj": {}
+    "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\sample_asp_reacttypescript_postgresql\\api\\api.csproj": {
+    "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\sample_asp_reacttypescript_postgresql\\api\\api.csproj",
+        "projectUniqueName": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\sample_asp_reacttypescript_postgresql\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\iago.leal.PROJEL\\.nuget\\packages\\",
-        "outputPath": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\sample_asp_reacttypescript_postgresql\\api\\obj\\",
+        "projectPath": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\iagol\\.nuget\\packages\\",
+        "outputPath": "D:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iago.leal.PROJEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iagol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
