@@ -1,0 +1,62 @@
+version: '3.8'
+
+networks:
+  dockerapi-dev:
+    driver: bridge
+  dockerui-dev:
+    driver: bridge
+
+services:
+  dockerui:
+    build:
+      context: ./react_ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: react-ui
+    stdin_open: true
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    networks:
+      - dockerui-dev
+
+
+  dockerapi:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    depends_on:
+      - "dockerdb"
+    ports:
+      - "8000:8000"
+#    environment:
+#      - DB_CONNECTION_STRING:"Host=dockerdb;Username=postgres;Password=api;Database=dockerdb"
+    networks:
+      dockerui-dev:
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  dockerdb:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    container_name: 'pgsql'
+    restart: always
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: dockeruser
+      POSTGRES_PASSWORD: api
+    networks:
+      - dockerapi-dev
+
+  pgadmin4:
+    image: dpage/pgadmin4:latest
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - dockerapi-dev
+
+volumes:
+  pg-data:
