@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<Departments>
+    <Department>
+        <Id>1</Id>
+        <Name>IT</Name>
+    </Department>
+    <Department>
+        <Id>2</Id>
+        <Name>Teste</Name>
+    </Department>
+</Departments>
