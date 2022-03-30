@@ -1,0 +1,33 @@
+<h3>Clientes</h3>
+<h3>
+    Olá , @Cliente.Nome
+    <br />
+    <input type="button" class="btn btn-primary" @onclick="AlterarNome" value="Alterar Nome" />
+    <input type="button" class="btn btn-primary" @onclick="AlterarEmail" value="Alterar Email " />
+</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Cliente.Nome</td>
+            <td>@Cliente.Email </td>
+        </tr>
+    </tbody>
+</table>
+@code {
+    [Parameter]
+    public ClienteViewModel Cliente { get; set; }
+    private void AlterarNome()
+    {
+        Cliente.Nome = "Novo nome";
+    }
+    private void AlterarEmail()
+    {
+        Cliente.Email = "Novo email";
+    }
+}

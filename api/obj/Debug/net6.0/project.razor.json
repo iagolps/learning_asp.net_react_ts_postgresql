@@ -12,6 +12,59 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -1782209274,
+        "Kind": "Components.Component",
+        "Name": "api.Components.Clientes",
+        "AssemblyName": "api",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Clientes"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Cliente",
+            "TypeName": "ClienteViewModel",
+            "Metadata": {
+              "Common.PropertyName": "Cliente"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "api.Components.Clientes"
+        }
+      },
+      {
+        "HashCode": 1946213222,
+        "Kind": "Components.Component",
+        "Name": "api.Components.Clientes",
+        "AssemblyName": "api",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "api.Components.Clientes"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Cliente",
+            "TypeName": "ClienteViewModel",
+            "Metadata": {
+              "Common.PropertyName": "Cliente"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "api.Components.Clientes",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1065816939,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -16296,6 +16349,27 @@
     "CSharpLanguageVersion": 1000
   },
   "RootNamespace": "api",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "d:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\Components\\Clientes.razor",
+      "TargetPath": "Components\\Clientes.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "d:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\_ViewImports.cshtml",
+      "TargetPath": "_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Meu_Drive\\Documentos\\Coding\\Samples\\asp.net_react_ts_postgresql\\api\\Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

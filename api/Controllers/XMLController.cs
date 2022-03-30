@@ -9,9 +9,9 @@ using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml;
-using SampleFS.Models;
+using api.Models;
 
-namespace SampleFS.Controllers
+namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 using Microsoft.Extensions.Configuration;
-using SampleFS.Models;
+using api.Models;
 using Npgsql;
 
-namespace SampleFS.Controllers
+namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
