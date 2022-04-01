@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 <Departments>
-    <Department>
-        <Id>1</Id>
-        <Name>IT</Name>
+    <Department plsname='Construction Staking Report' tagname='construction_staking_report' ncols='53' nrows='1260' units='1' titledetail=''>
+        <struct_number>1</struct_number>
+        <ahead_span>IT</ahead_span>
     </Department>
-    <Department>
-        <Id>2</Id>
-        <Name>Teste</Name>
+    <Department plsname='Construction Staking Report' tagname='construction_staking_report' ncols='53' nrows='1260' units='1' titledetail=''>
+        <struct_number>2</struct_number>
+        <ahead_span>Teste</ahead_span>
     </Department>
 </Departments>

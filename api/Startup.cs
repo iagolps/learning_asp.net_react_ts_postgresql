@@ -16,10 +16,6 @@ namespace api.Startup
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Add Blazor
-            services.AddServerSideBlazor();
-            services.AddControllersWithViews();
-
             //Enable CORS
             services.AddCors(c =>
             {
@@ -39,15 +35,6 @@ namespace api.Startup
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {
-            //Configure Blazor
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapBlazorHub();
-            });
-
             //Enable CORS
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 

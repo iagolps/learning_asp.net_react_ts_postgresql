@@ -1,13 +1,5 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Data;
-using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Xml;
 using api.Models;
 
@@ -15,41 +7,48 @@ namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class XmlHandler : ControllerBase
+    public class XmlController : ControllerBase
     {
-        private readonly ILogger<XmlHandler> _logger;
-        private IWebHostEnvironment Environment;
-
-        public XmlHandler(ILogger<XmlHandler> logger, IWebHostEnvironment environment)
+        private readonly IConfiguration _configuration;
+        public XmlController(IConfiguration configuration)
         {
-            _logger = logger;
-            Environment = environment;
+            _configuration = configuration;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public JsonResult Get()
         {
-            //DataTable table = new DataTable();
             DataSet dataSet = new DataSet();
-            List<Department> departments = new List<Department>();
+            List<XMLResult> xmlresults = new List<XMLResult>();
 
             XmlDocument XmlDoc = new XmlDocument();
-            XmlDoc.Load("D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/Departments.xml");
-            XmlReader xmlReader = new XmlNodeReader(XmlDoc);
+            XmlDoc.Load("D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/ld 69kv esperantina-matia olimpio.xml");
+            //XmlReader readXml = XmlReader.Create("D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/ld 69kv esperantina-matia olimpio.xml");
+            
+            //readXml.
 
-            foreach (XmlNode node in XmlDoc.SelectNodes("/Departments/Department"))
+            foreach (XmlElement nodeTable in XmlDoc.GetElementsByTagName("table"))
             {
+               XmlAttributeCollection attr = nodeTable.Attributes; //GetNamedItem("plsname");
+               if (attr.Value == "Construction Staking Report")
+               {
+                   foreach (XmlNode node in nodeTable.)
+                   {
 
-                departments.Add(new Department
+                   }
+               }
+
+               foreach (XmlNode node in nodeTable)
                 {
-                    DepartmentId = int.Parse(node["Id"].InnerText),
-                    DepartmentName = node["Name"].InnerText
+                    tag = xmlReader //.GetAttribute("plsname"),
+                    //StructureNumber = int.Parse(node["struct_number"].InnerText),
+                    //AheadSpan = node["ahead_span"].InnerText
                 });
             }
 
-            dataSet.ReadXml(xmlReader);
+            //dataSet.ReadXml(xmlReader);
 
-            return new JsonResult(dataSet);
+            return new JsonResult(xmlresults);
         }
     }
 }

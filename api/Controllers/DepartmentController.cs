@@ -22,17 +22,16 @@ namespace api.Controllers
             _configuration = configuration;
         }
 
-
         [HttpGet]
         public JsonResult Get()
         {
             string query = @"
-                            select DepartmentId, DepartmentName from
-                            testeschm.Department
+                            select departmentid, departmentname from
+                            testeschm.department
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("AppCon");
             NpgsqlDataReader myReader;
             using(NpgsqlConnection myCon =new NpgsqlConnection(sqlDataSource))
             {
@@ -53,12 +52,12 @@ namespace api.Controllers
         public JsonResult Post(Department dep)
         {
             string query = @"
-                           insert into testeschm.Department (departmentname)
+                           insert into testeschm.department (departmentname)
                            values (@DepartmentName)
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("AppCon");
             NpgsqlDataReader myReader;
             using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
             {
@@ -81,13 +80,13 @@ namespace api.Controllers
         public JsonResult Put(Department dep)
         {
             string query = @"
-                           update testeschm.Department
+                           update testeschm.department
                            set DepartmentName= @DepartmentName
                             where DepartmentId=@DepartmentId
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("AppCon");
             NpgsqlDataReader myReader;
             using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
             {
@@ -110,12 +109,12 @@ namespace api.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                           delete from testeschm.Department
+                           delete from testeschm.department
                             where DepartmentId=@DepartmentId
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("AppCon");
             NpgsqlDataReader myReader;
             using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
             {

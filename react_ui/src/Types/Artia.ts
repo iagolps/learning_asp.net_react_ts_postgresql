@@ -1,6 +1,6 @@
 export type Artias = {
-    projectid: number;
-    accountid: number;
+    id: number;
+    accountId: number;
     status: string;
-    projectname: string;
+    name: string;
 }

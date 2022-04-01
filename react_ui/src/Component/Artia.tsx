@@ -2,41 +2,41 @@ import axios from 'axios';
 import {variables} from "../Variables";
 import { useQuery } from 'react-query';
 import {Artias} from '../Types/Artia';
-//import {ArtiaToken} from './ArtiaToken';
+import {ArtiaToken} from './ArtiaToken';
 
 export function Artia() {
-    const {data: artias, isFetching} = useQuery<Artias[]>( 'ProjectId', async () =>
+    const {data: artias, isFetching} = useQuery<Artias[]>( 'listingProjects', async () =>
         {
-            return axios({
-                method: 'post',
-                url: variables.ARTIA_URL,
-                headers: { 
-                'OrganizationId': '91378', 
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNjU3NTUsImV4cCI6MTY0ODY3OTM0N30.KRVcQ8mgEHmurZpg7QwIADHrOe9qq0zilXlcTSRA3go',// + ArtiaToken.toString() ,
-                'Content-Type': 'application/json',
-                //'Cookie': '_artia_sessions=YU1sTmNMeGVSSW92TU14ZUg1bVIrdGpqQ1FZQnBxeVZxZTJMaFptTUVXZEUwZUVnM0gzMW9GUTlYcVdrWWdNOE9Sdmw3SktDNTQ5aFRXSDBGejdqai9ZMXU3eWszUlpMRWhHdFpLVjE0ZmM9LS1WMUhQRVcrYXV1MDlCWWJhaVNMRTR3PT0%3D--a33918bfd17105d460467792cd3d4af04813fb25'
-                },
-                data: JSON.stringify({
+            return axios.post(
+                variables.ARTIA_URL,
+                {
+                data: {
                     query: `query{
                         listingProjects(
                         accountId: 2973306
                         ) {
-                        id,
-                        name,
+                            id,
+                            accountId,
+                            status,
+                            name,
                         }
                         }`,
                         variables: {}
-                    })
-            })
-
+                    }
+            },
+            {
+                headers: { 
+                    'OrganizationId': '91378', 
+                    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNjU3NTUsImV4cCI6MTY0ODc0MDY4Mn0.VZAa0ZSOfP4ClGNYc9k1zVd5oxhjaXiqGivlOcNmhWo',// + ArtiaToken.toString() ,
+                    'Content-Type': 'application/json',
+                    'Cookie': '_artia_sessions=YU1sTmNMeGVSSW92TU14ZUg1bVIrdGpqQ1FZQnBxeVZxZTJMaFptTUVXZEUwZUVnM0gzMW9GUTlYcVdrWWdNOE9Sdmw3SktDNTQ5aFRXSDBGejdqai9ZMXU3eWszUlpMRWhHdFpLVjE0ZmM9LS1WMUhQRVcrYXV1MDlCWWJhaVNMRTR3PT0%3D--a33918bfd17105d460467792cd3d4af04813fb25'
+                }
+            },
+            )
             .then(
                 (response) => {
                 return response.data;
             })
-            
-            //.catch((error) => {
-            //    console.log(error);
-            //});
         },
         {
         staleTime: 1000 * 60, // 1 minuto
@@ -45,6 +45,7 @@ export function Artia() {
     return(
         <div>
             { isFetching && <p>Carregando...</p>}
+            <p>{() => ArtiaToken()}</p>
             <table className='table table-striped'>
                 <thead>
                     <tr>
@@ -62,9 +63,9 @@ export function Artia() {
                 <tbody>
                     {artias?.map(art => {
                         return (
-                        <tr key={art.projectid}>
-                            <th scope="row">{art.projectid}</th>
-                            <td>{art.projectname}</td>
+                        <tr key={art.id}>
+                            <td>{art.id}</td>
+                            <td>{art.name}</td>
                             <td>
                                 <button type='button'
                                 className='btn btn-light mr-1'>

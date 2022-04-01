@@ -62,3 +62,7 @@ D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug
 D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug\net6.0\api.pdb
 D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug\net6.0\api.genruntimeconfig.cache
 D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug\net6.0\ref\api.dll
+D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug\net6.0\api.RazorAssemblyInfo.cache
+D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\obj\Debug\net6.0\api.RazorAssemblyInfo.cs
+D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\bin\Debug\net6.0\System.IO.Packaging.dll
