@@ -11,6 +11,6 @@ namespace api.Models
 
         public string AheadSpan { get; set; }
 
-        public string tag { get; set; }
+        public string StructureDescription { get; set; }
     }
 }
