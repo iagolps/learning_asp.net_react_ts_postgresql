@@ -16,7 +16,7 @@ namespace api.Controllers
         }
 
         [HttpGet("{tab}")]
-        public JsonResult Get(string tab)
+        public JsonResult Post(string tab)
         {
             DataSet dataSet = new DataSet();
             List<XMLResult> xmlresults = new List<XMLResult>();
@@ -27,7 +27,7 @@ namespace api.Controllers
             switch (tab)
             {
                 case "locação":
-                    //Boolean foo = false;
+                    //Boolean foo = false; //For Debbug
                     //int i = 0; //For Debbug
                     //int j = 0; //For Debbug
                     foreach (XmlElement nodeNodes in XmlDoc.SelectNodes("/root/table"))
@@ -51,9 +51,12 @@ namespace api.Controllers
                             }
                         }
                     }
+                    return new JsonResult(xmlresults);
+                    break;
                 case "":
+                    return new JsonResult("Consulta inválida");
+                    break;
             }
-
-            return new JsonResult(xmlresults);
         }
+    }
 }

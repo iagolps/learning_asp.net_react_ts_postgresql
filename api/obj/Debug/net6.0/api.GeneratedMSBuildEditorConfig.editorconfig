@@ -8,25 +8,25 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = api
 build_property.RootNamespace = api
-build_property.ProjectDir = D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\
+build_property.ProjectDir = d:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api
+build_property.MSBuildProjectDirectory = d:\Meu_Drive\Documentos\Coding\Samples\asp.net_react_ts_postgresql\api
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/Components/Clientes.razor]
+[d:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/Components/Clientes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDbGllbnRlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/_Imports.razor]
+[d:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/Pages/Index.cshtml]
+[d:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/_ViewImports.cshtml]
+[d:/Meu_Drive/Documentos/Coding/Samples/asp.net_react_ts_postgresql/api/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = X1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

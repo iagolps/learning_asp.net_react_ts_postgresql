@@ -1,10 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Home} from './Component/Home';
-import {Department} from "./Component/Department";
-import {Employee} from './Component/Employee';
-import {Artia} from './Component/Artia';
+import {Department} from './Component/Department';
+import {Projects} from './Component/Projects';
 import {BrowserRouter, Route, Routes, NavLink} from 'react-router-dom';
 
 export function App() {
@@ -28,13 +25,8 @@ export function App() {
               </NavLink>
               </li>
               <li className="nav-item- m-1">
-              <NavLink className="btn btn-light btn-outline-primary" to="/employee">
-                Employee
-              </NavLink>
-              </li>
-              <li className="nav-item- m-1">
-              <NavLink className="btn btn-light btn-outline-primary" to="/artia">
-                Artia
+              <NavLink className="btn btn-light btn-outline-primary" to="/projects">
+                Projects
               </NavLink>
               </li>
           </ul>
@@ -43,10 +35,9 @@ export function App() {
         <Routes>
           <Route path='/home' element={<Home/>}/>
           <Route path='/department' element={<Department/>}/>
-          <Route path='/employee' element={<Employee/>}/>
-          <Route path='/artia' element={<Artia/>}/>
+          <Route path='/projects' element={<Projects/>}/>
         </Routes>
       </div>
     </BrowserRouter>
-  );
+  )
 }
